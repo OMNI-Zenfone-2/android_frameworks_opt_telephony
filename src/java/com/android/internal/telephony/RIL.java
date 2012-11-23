@@ -4815,6 +4815,18 @@ public class RIL extends BaseCommands implements CommandsInterface {
             }
             return;
         }
+<<<<<<< HEAD
+=======
+
+        RILRequest rr = RILRequest.obtain(RIL_REQUEST_SIM_OPEN_CHANNEL, response);
+        rr.mParcel.writeString(AID);
+
+        if (RILJ_LOGD)
+            riljLog(rr.serialString() + "> " + requestToString(rr.mRequest));
+
+        send(rr);
+    }
+>>>>>>> 36477b5... RIL: squashed support for old RIL
 
         RILRequest rr = RILRequest.obtain(RIL_REQUEST_SIM_OPEN_CHANNEL, response);
         rr.mParcel.writeString(AID);
